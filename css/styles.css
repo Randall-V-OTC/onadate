@@ -1,0 +1,11 @@
+body {
+    background-color: darkslategray;
+}
+
+.page-contents {
+    background-color: white;
+    margin: 5rem auto 5rem auto;
+    padding: 10rem;
+    border-radius: 5px;
+    border: 1px solid black;
+}
