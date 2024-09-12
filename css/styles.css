@@ -1,11 +1,28 @@
 body {
-    background-color: darkslategray;
+    background-color: #0B3948;
 }
 
 .page-contents {
-    background-color: white;
+    background-color: #416165;
     margin: 5rem auto 5rem auto;
-    padding: 10rem;
+    padding: 1rem;
     border-radius: 5px;
     border: 1px solid black;
+}
+
+.enteredInfo {
+    background-color: lightsalmon;
+    border: 1px solid black;
+    padding: 1.5rem;
+}
+
+.theForm {
+    background-color: #ACB0BD;
+    padding: 1rem;
+    color: black;
+}
+
+.theForm > input {
+    margin: 1rem;
+    background-color: black;
 }

@@ -1,5 +1,23 @@
 <?php 
     include "functions.php";
+
+    //todaysDate();
+
+    
+    echo("<br />");
+
+    $invDate = (function() {
+        if (isset($_GET['invoiceDate']) && !empty($_GET['invoiceDate'])) {
+            return $_GET['invoiceDate'];
+        }
+    });
+
+    $expDate = (function() {
+        if (isset($_GET['expirationDate']) && !empty($_GET['expirationDate'])) {
+            return $_GET['expirationDate'];
+        }
+    });
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -15,18 +33,12 @@
 
         <?php
 
-            todaysDate();
-            echo("<br />");
-            if (!empty($_GET['numDays'])) {
-                echo($_GET['numDays'] . " days from now is: ");
-                if (isset($_GET['numDays']))  {
-                    echo(calculateFutureDate($_GET['numDays']));
-                }
-            } else {
-                echo("Please select a number to calculate how many days in the future.");
-            }
-
             include "form.php";
+
+            echo("<div class='enteredInfo'>");
+                echo "The contract " . dateCalculation($invDate(), $expDate());
+                echo "<br />" . dateCalc($invDate(), $expDate());
+            echo("</div><br />");
         ?>
 
         </div>
