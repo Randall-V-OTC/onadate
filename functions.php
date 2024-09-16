@@ -15,6 +15,7 @@
         return($futureDate);
     }
 
+    // calculate the difference between two dates and return a string that displays how many years, months and days that have either passed or not
     function dateCalculation($date1, $date2) {
 
         $days = (60*60*24); // this is a single day in seconds
@@ -43,6 +44,7 @@
         
     }
 
+    // calculate using the date object (just to learn)
     function dateCalc($date1, $date2) {
         $strDate1 = strtotime($date1);
         $strDate2 = strtotime($date2);

@@ -6,12 +6,14 @@
     
     echo("<br />");
 
+    // an anonymous function (closure in PHP) to determine if the invoiceDate has values
     $invDate = (function() {
         if (isset($_GET['invoiceDate']) && !empty($_GET['invoiceDate'])) {
             return $_GET['invoiceDate'];
         }
     });
 
+    // an anonymous function (closure in PHP) to determine if the expirationDate has values
     $expDate = (function() {
         if (isset($_GET['expirationDate']) && !empty($_GET['expirationDate'])) {
             return $_GET['expirationDate'];
